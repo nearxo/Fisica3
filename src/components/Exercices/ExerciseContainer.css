@@ -1,0 +1,501 @@
+
+/* ==========================================
+   EXERCISE CONTAINER
+========================================== */
+
+.exercise-container {
+  --physics-accent: #38bdf8;
+  --physics-success: #10b981;
+  --physics-warning: #f59e0b;
+  --exercise-bg: var(--background, #0b111a);
+  --card-background: var(--card, #121d2a);
+  --border-color: var(--border, #293849);
+  --text-primary: var(--foreground, #f1f5f9);
+  --text-secondary: var(--muted-foreground, #94a3b8);
+
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 24px;
+  color: var(--text-primary);
+}
+
+.exercise-body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.exercise-header {
+  padding: 26px;
+  margin-bottom: 32px;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    var(--card-background),
+    var(--exercise-bg)
+  );
+}
+
+.exercise-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.exercise-chapter,
+.exercise-number {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--physics-accent);
+}
+
+.exercise-header h1 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin: 8px 0 16px;
+  line-height: 1.2;
+}
+
+.exercise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exercise-tags span,
+.exercise-difficulty {
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  background: var(--exercise-bg);
+  border: 1px solid var(--border-color);
+}
+
+.exercise-difficulty.basic {
+  color: #10b981;
+}
+
+.exercise-difficulty.intermediate {
+  color: #38bdf8;
+}
+
+.exercise-difficulty.advanced {
+  color: #f59e0b;
+}
+
+/* ==========================================
+   GENERAL SECTIONS
+========================================== */
+
+.scientific-section {
+  width: 100%;
+  min-width: 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.section-index {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  color: var(--physics-accent);
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.section-heading p {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   STATEMENT
+========================================== */
+
+.statement-content {
+  padding: 22px;
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--physics-accent);
+  border-radius: 10px;
+  background: var(--card-background);
+  line-height: 1.8;
+}
+
+.statement-content p {
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* ==========================================
+   GIVEN DATA
+========================================== */
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.variable-panel {
+  min-width: 0;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--card-background);
+}
+
+.variable-panel h3 {
+  font-size: 0.9rem;
+  margin: 0 0 16px;
+}
+
+.variable-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.variable-description {
+  margin: 5px 0 0 8px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.empty-message {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ==========================================
+   FORMULAS
+========================================== */
+
+.formula-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.formula-card {
+  min-width: 0;
+  margin: 0;
+}
+
+/* ==========================================
+   SOLUTION TOGGLE
+========================================== */
+
+.solution-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--card-background);
+}
+
+.solution-toggle h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.solution-toggle p {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  margin: 6px 0 0;
+}
+
+.solution-toggle button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--physics-accent);
+  background: transparent;
+  color: var(--physics-accent);
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.solution-toggle button:hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* ==========================================
+   SOLUTION TIMELINE
+========================================== */
+
+.solution-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.solution-step {
+  display: flex;
+  gap: 16px;
+  min-width: 0;
+}
+
+.step-marker {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--physics-accent);
+  background: var(--card-background);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.step-content {
+  flex: 1;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--card-background);
+}
+
+.step-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--physics-accent);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.step-content h3 {
+  margin: 12px 0 8px;
+  font-size: 1rem;
+}
+
+.step-explanation {
+  margin: 0 0 12px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.step-equation,
+.step-calculation {
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  background: var(--exercise-bg);
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.step-calculation > span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+
+.step-result {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px;
+  border-left: 3px solid var(--physics-success);
+}
+
+.step-result > span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.step-warning .step-marker {
+  color: var(--physics-warning);
+}
+
+.step-warning .step-content {
+  border-color: var(--physics-warning);
+}
+
+/* ==========================================
+   RESULTS
+========================================== */
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.result-card {
+  min-width: 0;
+}
+
+.result-card .math-result {
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* ==========================================
+   INTERPRETATION
+========================================== */
+
+.interpretation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.interpretation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  background: var(--card-background);
+  border-radius: 10px;
+}
+
+.interpretation-marker {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  color: var(--physics-accent);
+  background: var(--exercise-bg);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.interpretation-item p {
+  margin: 2px 0 0;
+  line-height: 1.7;
+  font-size: 0.88rem;
+}
+
+/* ==========================================
+   VISUALIZATION
+========================================== */
+
+.visualization-container {
+  padding: 18px;
+  border-radius: 12px;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.physics-diagram {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visualization-placeholder {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.visualization-placeholder span {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--physics-accent);
+}
+
+.visualization-placeholder p {
+  font-size: 0.85rem;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.exercise-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 22px;
+  margin-top: 36px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+  .exercise-container {
+    padding: 18px 14px;
+  }
+
+  .data-grid,
+  .formula-list,
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-toggle {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .solution-toggle button {
+    width: 100%;
+  }
+
+  .exercise-header {
+    padding: 18px;
+  }
+
+  .step-content {
+    padding: 14px;
+  }
+
+  .step-meta {
+    flex-direction: column;
+  }
+}

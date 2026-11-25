@@ -1,0 +1,94 @@
+
+.scientific-math {
+  width: 100%;
+  line-height: 1.8;
+}
+
+.scientific-math .katex-display {
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.formula-card {
+  padding: 18px;
+  border: 1px solid var(--border-color, #303b49);
+  border-radius: 12px;
+  background: var(--card-background, #101923);
+  margin: 14px 0;
+}
+
+.formula-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.formula-card-description {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #94a3b8);
+  margin: 12px 0 0;
+}
+
+.calculation-block {
+  padding: 14px 16px;
+  margin: 12px 0;
+  border-left: 3px solid var(--physics-accent, #38bdf8);
+  background: var(--card-background, #101923);
+  border-radius: 0 8px 8px 0;
+}
+
+.calculation-block h4 {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+}
+
+.calculation-result {
+  border-top: 1px solid var(--border-color, #303b49);
+  margin-top: 12px;
+  padding-top: 8px;
+}
+
+.variable-display {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--card-background, #101923);
+  border: 1px solid var(--border-color, #303b49);
+}
+
+.variable-symbol {
+  min-width: 48px;
+  font-size: 1.15rem;
+}
+
+.variable-information {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.variable-information span {
+  font-size: 0.78rem;
+  color: var(--text-secondary, #94a3b8);
+}
+
+.math-result {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--physics-success, #10b981);
+  background: var(--card-background, #101923);
+  margin: 16px 0;
+}
+
+.math-result-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.math-result p {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #94a3b8);
+}

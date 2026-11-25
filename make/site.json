@@ -1,0 +1,10 @@
+{
+  "description": "Explore and manipulate sound waves with an interactive physics platform, adjusting frequency, amplitude, and filters to study wave behavior and interference.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
